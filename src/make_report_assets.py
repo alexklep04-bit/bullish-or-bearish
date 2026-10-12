@@ -206,8 +206,8 @@ def fig_learning_curve(df):
         plt.close(fig)
         return
     # direct labels at the line ends, nudged apart when two lines finish at the same value
-    # (ties: the line arriving from lower down keeps the lower label)
-    ends.sort()
+    # (ties within half a point: the line arriving from lower down keeps the lower label)
+    ends.sort(key=lambda e: (round(e[0]), e[1]))
     for i in range(1, len(ends)):
         ends[i][0] = max(ends[i][0], ends[i - 1][0] + 1.7)
     for y_lab, _, label, x_end in ends:

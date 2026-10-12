@@ -33,3 +33,74 @@ finbert_frac0.1              seed=2  dev F1=0.760  test acc=0.816 F1=0.760  PB50
   [finbert seed=3 frac=0.1] epoch 1: loss=0.9724 dev F1=0.2849
   [finbert seed=3 frac=0.1] epoch 2: loss=0.7011 dev F1=0.5617
   [finbert seed=3 frac=0.1] epoch 3: loss=0.4690 dev F1=0.7446
+  [finbert seed=3 frac=0.1] epoch 4: loss=0.2543 dev F1=0.7720
+  [finbert seed=3 frac=0.1] epoch 5: loss=0.1177 dev F1=0.7746
+  [finbert seed=3 frac=0.1] epoch 6: loss=0.0541 dev F1=0.7689
+  [finbert seed=3 frac=0.1] epoch 7: loss=0.0254 dev F1=0.7537
+  [finbert seed=3 frac=0.1] epoch 8: loss=0.0145 dev F1=0.7670
+  [finbert seed=3 frac=0.1] epoch 9: loss=0.0081 dev F1=0.7641
+  [finbert seed=3 frac=0.1] epoch 10: loss=0.0076 dev F1=0.7673
+finbert_frac0.1              seed=3  dev F1=0.775  test acc=0.835 F1=0.779  PB50 F1=0.671  PBall F1=0.843
+  [bert seed=2 frac=0.1] epoch 1: loss=1.0851 dev F1=0.2618
+  [bert seed=2 frac=0.1] epoch 2: loss=0.8403 dev F1=0.4122
+  [bert seed=2 frac=0.1] epoch 3: loss=0.6921 dev F1=0.4624
+  [bert seed=2 frac=0.1] epoch 4: loss=0.5351 dev F1=0.6601
+  [bert seed=2 frac=0.1] epoch 5: loss=0.3558 dev F1=0.7054
+  [bert seed=2 frac=0.1] epoch 6: loss=0.2477 dev F1=0.6999
+  [bert seed=2 frac=0.1] epoch 7: loss=0.1530 dev F1=0.7199
+  [bert seed=2 frac=0.1] epoch 8: loss=0.1123 dev F1=0.7081
+  [bert seed=2 frac=0.1] epoch 9: loss=0.0704 dev F1=0.6891
+  [bert seed=2 frac=0.1] epoch 10: loss=0.0581 dev F1=0.7024
+bert_frac0.1                 seed=2  dev F1=0.720  test acc=0.792 F1=0.725  PB50 F1=0.623  PBall F1=0.732
+  [bert seed=3 frac=0.1] epoch 1: loss=0.9270 dev F1=0.2620
+  [bert seed=3 frac=0.1] epoch 2: loss=0.8080 dev F1=0.5327
+  [bert seed=3 frac=0.1] epoch 3: loss=0.6407 dev F1=0.6457
+  [bert seed=3 frac=0.1] epoch 4: loss=0.4536 dev F1=0.6815
+  [bert seed=3 frac=0.1] epoch 5: loss=0.2884 dev F1=0.6980
+  [bert seed=3 frac=0.1] epoch 6: loss=0.1770 dev F1=0.7011
+  [bert seed=3 frac=0.1] epoch 7: loss=0.1121 dev F1=0.7145
+  [bert seed=3 frac=0.1] epoch 8: loss=0.0667 dev F1=0.7113
+  [bert seed=3 frac=0.1] epoch 9: loss=0.0505 dev F1=0.7041
+  [bert seed=3 frac=0.1] epoch 10: loss=0.0377 dev F1=0.7089
+bert_frac0.1                 seed=3  dev F1=0.715  test acc=0.817 F1=0.746  PB50 F1=0.646  PBall F1=0.786
+  [finbert seed=2 frac=0.25] epoch 1: loss=0.8122 dev F1=0.7089
+  [finbert seed=2 frac=0.25] epoch 2: loss=0.4629 dev F1=0.7625
+  [finbert seed=2 frac=0.25] epoch 3: loss=0.2841 dev F1=0.7821
+  [finbert seed=2 frac=0.25] epoch 4: loss=0.1915 dev F1=0.7863
+finbert_frac0.25             seed=2  dev F1=0.786  test acc=0.837 F1=0.787  PB50 F1=0.682  PBall F1=0.864
+  [finbert seed=3 frac=0.25] epoch 1: loss=0.8084 dev F1=0.7230
+  [finbert seed=3 frac=0.25] epoch 2: loss=0.4317 dev F1=0.7739
+  [finbert seed=3 frac=0.25] epoch 3: loss=0.2588 dev F1=0.7804
+  [finbert seed=3 frac=0.25] epoch 4: loss=0.1635 dev F1=0.7776
+finbert_frac0.25             seed=3  dev F1=0.780  test acc=0.840 F1=0.794  PB50 F1=0.680  PBall F1=0.846
+  [bert seed=2 frac=0.25] epoch 1: loss=0.9612 dev F1=0.2808
+  [bert seed=2 frac=0.25] epoch 2: loss=0.6328 dev F1=0.7349
+  [bert seed=2 frac=0.25] epoch 3: loss=0.4019 dev F1=0.7362
+  [bert seed=2 frac=0.25] epoch 4: loss=0.3084 dev F1=0.7392
+bert_frac0.25                seed=2  dev F1=0.739  test acc=0.830 F1=0.761  PB50 F1=0.653  PBall F1=0.811
+  [bert seed=3 frac=0.25] epoch 1: loss=0.8617 dev F1=0.5797
+  [bert seed=3 frac=0.25] epoch 2: loss=0.5815 dev F1=0.7128
+  [bert seed=3 frac=0.25] epoch 3: loss=0.3792 dev F1=0.7468
+  [bert seed=3 frac=0.25] epoch 4: loss=0.2742 dev F1=0.7511
+bert_frac0.25                seed=3  dev F1=0.751  test acc=0.831 F1=0.768  PB50 F1=0.629  PBall F1=0.792
+  [finbert seed=2 frac=0.5] epoch 1: loss=0.6951 dev F1=0.7732
+  [finbert seed=2 frac=0.5] epoch 2: loss=0.3388 dev F1=0.7992
+  [finbert seed=2 frac=0.5] epoch 3: loss=0.1986 dev F1=0.8091
+  [finbert seed=2 frac=0.5] epoch 4: loss=0.1246 dev F1=0.8068
+finbert_frac0.5              seed=2  dev F1=0.809  test acc=0.856 F1=0.812  PB50 F1=0.686  PBall F1=0.863
+  [finbert seed=3 frac=0.5] epoch 1: loss=0.6980 dev F1=0.7770
+  [finbert seed=3 frac=0.5] epoch 2: loss=0.3555 dev F1=0.8078
+  [finbert seed=3 frac=0.5] epoch 3: loss=0.2088 dev F1=0.8120
+  [finbert seed=3 frac=0.5] epoch 4: loss=0.1271 dev F1=0.8058
+finbert_frac0.5              seed=3  dev F1=0.812  test acc=0.858 F1=0.814  PB50 F1=0.700  PBall F1=0.866
+  [bert seed=2 frac=0.5] epoch 1: loss=0.8301 dev F1=0.7277
+  [bert seed=2 frac=0.5] epoch 2: loss=0.4447 dev F1=0.7858
+  [bert seed=2 frac=0.5] epoch 3: loss=0.2789 dev F1=0.7933
+  [bert seed=2 frac=0.5] epoch 4: loss=0.1988 dev F1=0.8033
+bert_frac0.5                 seed=2  dev F1=0.803  test acc=0.852 F1=0.811  PB50 F1=0.687  PBall F1=0.832
+  [bert seed=3 frac=0.5] epoch 1: loss=0.7478 dev F1=0.7573
+  [bert seed=3 frac=0.5] epoch 2: loss=0.4203 dev F1=0.8000
+  [bert seed=3 frac=0.5] epoch 3: loss=0.2674 dev F1=0.8039
+  [bert seed=3 frac=0.5] epoch 4: loss=0.1791 dev F1=0.7994
+bert_frac0.5                 seed=3  dev F1=0.804  test acc=0.859 F1=0.814  PB50 F1=0.672  PBall F1=0.827
+GPU QUEUE DONE
