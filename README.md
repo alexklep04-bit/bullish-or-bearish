@@ -107,7 +107,9 @@ mistake for a trading signal.
 - **Domain shift separates the models:** TF-IDF loses 17 points on PhraseBank and the GloVe models about 10;
   BERT loses 1.4 on average but swings between 80.0 and 85.6 across seeds, and FinBERT is the only model that improves (+3.3).
 - **Finance pre-training pays off off-domain and with little data, not in-domain:** on tweets BERT is even 1.2 points
-  ahead, but FinBERT is the most robust model on formal news and leads by about 5 points with 10% of the labels.
+  ahead, but FinBERT is the most robust model on formal news and leads BERT by about 4 points with 10% of the labels.
+- **Transformers need far fewer labels:** with 811 tweets (10%), FinBERT reaches 76.3, within about one point of
+  TF-IDF and the CNN trained on all 8,111; on the same 811 tweets those two reach only 61–63.
 - **JPMorgan in a headline is rarely news about JPMorgan:** in 46 of the 64 test tweets that name a big bank,
   the bank is only the messenger (*Netflix downgraded to underperform at Wells Fargo*); only 4 of 47
   directional bank tweets carry sentiment about the bank. A trading signal needs target-dependent sentiment.
