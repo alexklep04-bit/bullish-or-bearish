@@ -9,3 +9,27 @@ bert                         seed=1  dev F1=0.831  test acc=0.873 F1=0.835  PB50
   [bert seed=2 frac=1.0] epoch 4: loss=0.1175 dev F1=0.8182
 bert                         seed=2  dev F1=0.818  test acc=0.877 F1=0.842  PB50 F1=0.694  PBall F1=0.856
   [bert seed=3 frac=1.0] epoch 1: loss=0.6465 dev F1=0.7777
+  [bert seed=3 frac=1.0] epoch 2: loss=0.3329 dev F1=0.8184
+  [bert seed=3 frac=1.0] epoch 3: loss=0.2001 dev F1=0.8258
+  [bert seed=3 frac=1.0] epoch 4: loss=0.1232 dev F1=0.8283
+bert                         seed=3  dev F1=0.828  test acc=0.876 F1=0.840  PB50 F1=0.669  PBall F1=0.820
+  [finbert seed=3 frac=1.0] epoch 1: loss=0.6005 dev F1=0.8103
+  [finbert seed=3 frac=1.0] epoch 2: loss=0.2983 dev F1=0.8236
+  [finbert seed=3 frac=1.0] epoch 3: loss=0.1666 dev F1=0.8264
+  [finbert seed=3 frac=1.0] epoch 4: loss=0.0950 dev F1=0.8200
+finbert                      seed=3  dev F1=0.826  test acc=0.877 F1=0.836  PB50 F1=0.688  PBall F1=0.854
+MAIN TRANSFORMER RUNS DONE
+  [finbert seed=2 frac=0.1] epoch 1: loss=0.9728 dev F1=0.2620
+  [finbert seed=2 frac=0.1] epoch 2: loss=0.7166 dev F1=0.5453
+  [finbert seed=2 frac=0.1] epoch 3: loss=0.5127 dev F1=0.6334
+  [finbert seed=2 frac=0.1] epoch 4: loss=0.3547 dev F1=0.7344
+  [finbert seed=2 frac=0.1] epoch 5: loss=0.1996 dev F1=0.7209
+  [finbert seed=2 frac=0.1] epoch 6: loss=0.1103 dev F1=0.7561
+  [finbert seed=2 frac=0.1] epoch 7: loss=0.0564 dev F1=0.7598
+  [finbert seed=2 frac=0.1] epoch 8: loss=0.0298 dev F1=0.7574
+  [finbert seed=2 frac=0.1] epoch 9: loss=0.0175 dev F1=0.7575
+  [finbert seed=2 frac=0.1] epoch 10: loss=0.0143 dev F1=0.7587
+finbert_frac0.1              seed=2  dev F1=0.760  test acc=0.816 F1=0.760  PB50 F1=0.652  PBall F1=0.817
+  [finbert seed=3 frac=0.1] epoch 1: loss=0.9724 dev F1=0.2849
+  [finbert seed=3 frac=0.1] epoch 2: loss=0.7011 dev F1=0.5617
+  [finbert seed=3 frac=0.1] epoch 3: loss=0.4690 dev F1=0.7446

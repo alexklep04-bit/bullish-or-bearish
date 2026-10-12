@@ -201,15 +201,16 @@ def fig_learning_curve(df):
         xs, ys, sd, _ = map(np.array, zip(*pts))
         ax.errorbar(xs, 100 * ys, yerr=100 * sd, color=color, lw=2, marker="o", ms=5, label=label, capsize=2.5,
                     elinewidth=1, markeredgecolor="white", markeredgewidth=1)
-        ends.append([100 * ys[-1], label, xs[-1]])
+        ends.append([100 * ys[-1], 100 * ys[-2], label, xs[-1]])
     if not ends:
         plt.close(fig)
         return
     # direct labels at the line ends, nudged apart when two lines finish at the same value
+    # (ties: the line arriving from lower down keeps the lower label)
     ends.sort()
     for i in range(1, len(ends)):
         ends[i][0] = max(ends[i][0], ends[i - 1][0] + 1.7)
-    for y_lab, label, x_end in ends:
+    for y_lab, _, label, x_end in ends:
         ax.text(x_end * 1.08, y_lab, label, va="center", fontsize=7.5, color=INK2)
     ax.set_xscale("log")
     ax.set_xticks([811, 2028, 4056, 8111], ["811\n(10%)", "2,028\n(25%)", "4,056\n(50%)", "8,111\n(100%)"])

@@ -15,4 +15,5 @@ LM lexicon + regex     1            53.1           54.1             69.7        
    TF-IDF + LogReg     1            81.2           80.2             84.4            77.2
     CNN-non-static     3            79.7           78.6             83.8            77.2
             BiLSTM     3            77.6           76.1             83.3            77.1
-           FinBERT     2            88.3           87.1             86.4            81.9
+         BERT-base     3            84.9           84.0             87.6            83.7
+           FinBERT     3            87.0           85.8             86.8            82.4
