@@ -15,7 +15,8 @@ for the stock:
 
 This project builds that block with one model from every lecture of the course, compares them on the same data,
 and tests what happens on formal news text they never saw. It is the experimental homework for the
-*Language Technologies* course (report + presentation).
+*Language Technologies* course: the written report is in [report/report.pdf](report/report.pdf)
+(also as [Word](report/report.docx)).
 
 ## Why this matters
 
@@ -87,10 +88,10 @@ Macro-F1 (%) on the Twitter test set and on PhraseBank (never seen in training);
 | CNN-non-static (GloVe) | 77.5 ± 0.1 | 83.7 ± 0.0 | 6.9 ± 0.4 | 68.0 ± 1.8 | 56.1 ± 1.4 |
 | BiLSTM (GloVe) | 77.3 ± 0.6 | 83.1 ± 0.9 | 7.9 ± 0.8 | 65.6 ± 3.8 | 54.9 ± 2.7 |
 | FinBERT-Prosus, zero-shot | 65.4 | 70.1 | 9.4 | (trained on it) | (trained on it) |
-| BERT-base, fine-tuned* | 83.9 ± 0.3 | 87.5 ± 0.2 | 3.8 ± 0.3 | 82.8 ± 2.8 | 67.1 ± 2.2 |
-| FinBERT, fine-tuned* | 82.2 ± 0.8 | 86.4 ± 0.8 | 5.8 ± 1.0 | 86.3 ± 0.6 | 69.4 ± 0.9 |
+| BERT-base, fine-tuned | **83.9 ± 0.3** | **87.5 ± 0.2** | **3.7 ± 0.3** | 82.5 ± 2.3 | 67.1 ± 1.8 |
+| FinBERT, fine-tuned | 82.7 ± 0.9 | 86.8 ± 0.9 | 5.3 ± 1.1 | **86.0 ± 0.6** | **69.2 ± 0.8** |
 
-\* preliminary (2 of 3 seeds); updated when the last runs finish. Full tables: [results/summary.txt](results/summary.txt).
+Full tables, significance tests and the error analysis: [results/summary.txt](results/summary.txt).
 *Sign errors* = share of truly bullish or bearish tweets labelled with the opposite direction, the costliest
 mistake for a trading signal.
 
@@ -98,14 +99,15 @@ mistake for a trading signal.
 
 ### Key findings
 
-- **Transformers win in-domain:** fine-tuned BERT and FinBERT beat the best classical model by 4–6 macro-F1 points
+- **Transformers win in-domain:** fine-tuned BERT and FinBERT beat the best classical model by 5–6 macro-F1 points
   (paired bootstrap, 95% CI above zero for every seed).
 - **The classical models tie:** TF-IDF, the GloVe CNN and the BiLSTM are statistically indistinguishable (≈ 77.5).
 - **Regex rules are cheap and robust:** 14 rules add 17.4 points to the finance lexicon with zero training,
   and the rule-based model transfers to formal news as well as TF-IDF.
-- **Domain shift separates the models:** TF-IDF loses 17 points on PhraseBank, GloVe models about 10;
-  FinBERT is the only model that does not drop.
-- **Finance pre-training pays off off-domain and with little data, not in-domain** (see the learning curve).
+- **Domain shift separates the models:** TF-IDF loses 17 points on PhraseBank and the GloVe models about 10;
+  BERT loses 1.4 on average but swings between 80.0 and 85.6 across seeds, and FinBERT is the only model that improves (+3.3).
+- **Finance pre-training pays off off-domain and with little data, not in-domain:** on tweets BERT is even 1.2 points
+  ahead, but FinBERT is the most robust model on formal news and leads by about 5 points with 10% of the labels.
 - **JPMorgan in a headline is rarely news about JPMorgan:** in 46 of the 64 test tweets that name a big bank,
   the bank is only the messenger (*Netflix downgraded to underperform at Wells Fargo*); only 4 of 47
   directional bank tweets carry sentiment about the bank. A trading signal needs target-dependent sentiment.
