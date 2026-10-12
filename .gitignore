@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# macOS
+.DS_Store
+
+# third-party data: download with ./get_data.sh (see data/README.md)
+data/twitter_fin/
+data/phrasebank/
+data/lexicon/
+
+# intermediate files of the report build
+report/*.prepared.md
+report/*.html
