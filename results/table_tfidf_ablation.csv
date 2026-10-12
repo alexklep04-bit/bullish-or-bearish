@@ -1,0 +1,5 @@
+Variant,Dev macro-F1,Test macro-F1,Test accuracy,PhraseBank-All F1
+No preprocessing,76.3,76.5,83.2,61.6
+Regex normalisation (URL/@user/$TICKER),75.8,76.9,83.0,63.2
++ numbers and % -> placeholders,75.0,75.7,81.8,62.4
+Normalisation + char 2-5-grams,76.7,77.5,84.3,60.8

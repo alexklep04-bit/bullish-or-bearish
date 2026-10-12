@@ -1,0 +1,188 @@
+MAIN RESULTS (test = official Twitter valid split, 2,388 tweets)
+     Family                        Model Seeds   Accuracy   Macro-F1 F1 Bearish F1 Bullish F1 Neutral Sign errors % PhraseBank-All F1 PhraseBank-50 F1 Train time (s)
+  Reference               Always Neutral     -       65.6       26.4        0.0        0.0       79.2           0.0              25.4             24.8              -
+ Rule-based                   LM lexicon     1       60.1       46.0       42.1       23.4       72.5           6.8              48.3             50.4              -
+ Rule-based     LM lexicon + regex rules     1       69.2       63.4       53.8       59.5       76.9           6.4              62.9             58.1              -
+     Linear TF-IDF + logistic regression     1       84.3       77.5       67.8       74.6       90.2           6.7              60.8             50.6              -
+        CNN                     CNN-rand     3 82.6 ± 0.8 74.9 ± 1.5 64.0 ± 2.8 71.2 ± 1.5 89.4 ± 0.3     8.6 ± 1.3        54.9 ± 3.1       46.4 ± 2.3            313
+        CNN           CNN-static (GloVe)     3 82.1 ± 0.6 74.7 ± 0.8 65.5 ± 0.9 69.5 ± 1.5 89.2 ± 0.2     9.7 ± 1.4        65.0 ± 2.8       53.4 ± 2.4            238
+        CNN       CNN-non-static (GloVe)     3 83.7 ± 0.0 77.5 ± 0.1 68.9 ± 0.4 74.1 ± 0.1 89.6 ± 0.1     6.9 ± 0.4        68.0 ± 1.8       56.1 ± 1.4            104
+        RNN               BiLSTM (GloVe)     3 83.1 ± 0.9 77.3 ± 0.6 68.4 ± 1.2 74.4 ± 0.6 89.1 ± 0.8     7.9 ± 0.8        65.6 ± 3.8       54.9 ± 2.7            168
+Transformer    FinBERT-Prosus, zero-shot     1       70.1       65.4       57.8       60.7       77.6           9.4   (trained on it)  (trained on it)              -
+Transformer        BERT-base, fine-tuned     2 87.5 ± 0.2 83.9 ± 0.3 78.7 ± 0.3 81.5 ± 0.6 91.4 ± 0.1     3.8 ± 0.3        82.8 ± 2.8       67.1 ± 2.2            810
+Transformer          FinBERT, fine-tuned     2 86.4 ± 0.8 82.2 ± 0.8 74.9 ± 0.8 80.8 ± 1.2 91.0 ± 0.5     5.8 ± 1.0        86.3 ± 0.6       69.4 ± 0.9           1139
+
+TF-IDF PREPROCESSING ABLATION
+                                Variant Dev macro-F1 Test macro-F1 Test accuracy PhraseBank-All F1
+                       No preprocessing         76.3          76.5          83.2              61.6
+Regex normalisation (URL/@user/$TICKER)         75.8          76.9          83.0              63.2
+        + numbers and % -> placeholders         75.0          75.7          81.8              62.4
+         Normalisation + char 2-5-grams         76.7          77.5          84.3              60.8
+
+LEARNING CURVE (test macro-F1, mean ± std over seeds)
+          Model       811 tweets      2028 tweets      4056 tweets      8111 tweets
+TF-IDF + LogReg 62.6 ± 1.6 (n=3) 67.5 ± 0.5 (n=3) 72.2 ± 1.2 (n=3) 77.5 ± 0.0 (n=1)
+ CNN-non-static 60.9 ± 0.8 (n=3) 68.7 ± 0.4 (n=3) 73.9 ± 0.8 (n=3) 77.5 ± 0.1 (n=3)
+      BERT-base 70.2 ± 0.0 (n=1) 74.3 ± 0.0 (n=1) 80.7 ± 0.0 (n=1) 83.9 ± 0.3 (n=2)
+        FinBERT 75.0 ± 0.0 (n=1) 79.6 ± 0.0 (n=1) 81.5 ± 0.0 (n=1) 82.2 ± 0.8 (n=2)
+
+McNEMAR TESTS (exact, paired test predictions per seed; n01 = only A right, n10 = only B right)
+  finbert vs bert [seed 1]: n01=130 n10=132 p=9.51e-01
+  finbert vs bert [seed 2]: n01=100 n10=149 p=2.29e-03
+  finbert vs tfidf_lr[norm+char] [seed 1]: n01=198 n10=130 p=2.06e-04
+  finbert vs tfidf_lr[norm+char] [seed 2]: n01=199 n10=168 p=1.17e-01
+  bert vs tfidf_lr[norm+char] [seed 1]: n01=207 n10=137 p=1.90e-04
+  bert vs tfidf_lr[norm+char] [seed 2]: n01=211 n10=131 p=1.79e-05
+  cnn-nonstatic vs tfidf_lr[norm+char] [seed 1]: n01=119 n10=134 p=3.79e-01
+  cnn-nonstatic vs tfidf_lr[norm+char] [seed 2]: n01=125 n10=141 p=3.58e-01
+  cnn-nonstatic vs tfidf_lr[norm+char] [seed 3]: n01=122 n10=137 p=3.84e-01
+  bilstm vs cnn-nonstatic [seed 1]: n01=111 n10=149 p=2.16e-02
+  bilstm vs cnn-nonstatic [seed 2]: n01=103 n10=88 p=3.11e-01
+  bilstm vs cnn-nonstatic [seed 3]: n01=104 n10=121 p=2.86e-01
+  finbert vs finbert-prosus-zeroshot [seed 1]: n01=525 n10=118 p=3.73e-62
+  finbert vs finbert-prosus-zeroshot [seed 2]: n01=501 n10=131 p=7.00e-52
+  lexicon_LM+regex vs lexicon_LM [seed 1]: n01=263 n10=46 p=4.28e-38
+  lexicon_LM+regex vs lexicon_LM [seed 2]: n01=263 n10=46 p=4.28e-38
+  lexicon_LM+regex vs lexicon_LM [seed 3]: n01=263 n10=46 p=4.28e-38
+
+PAIRED BOOTSTRAP, macro-F1 difference A - B in points (95% CI, two-sided p; 2,000 resamples)
+  finbert vs bert [seed 1]: -0.5 [-2.3, +1.2] p=0.579
+  finbert vs bert [seed 2]: -2.8 [-4.4, -1.1] p=0.000
+  finbert vs tfidf_lr[norm+char] [seed 1]: +5.5 [+3.5, +7.7] p=0.000
+  finbert vs tfidf_lr[norm+char] [seed 2]: +3.9 [+1.7, +6.0] p=0.000
+  bert vs tfidf_lr[norm+char] [seed 1]: +6.0 [+3.9, +8.2] p=0.000
+  bert vs tfidf_lr[norm+char] [seed 2]: +6.7 [+4.6, +8.8] p=0.000
+  cnn-nonstatic vs tfidf_lr[norm+char] [seed 1]: -0.1 [-2.0, +1.8] p=0.938
+  cnn-nonstatic vs tfidf_lr[norm+char] [seed 2]: +0.1 [-1.9, +2.1] p=0.878
+  cnn-nonstatic vs tfidf_lr[norm+char] [seed 3]: -0.1 [-2.0, +1.9] p=0.986
+  bilstm vs cnn-nonstatic [seed 1]: -1.0 [-2.7, +0.7] p=0.265
+  bilstm vs cnn-nonstatic [seed 2]: +0.2 [-1.5, +1.9] p=0.824
+  bilstm vs cnn-nonstatic [seed 3]: +0.2 [-1.3, +1.9] p=0.850
+  finbert vs finbert-prosus-zeroshot [seed 1]: +17.7 [+15.4, +20.0] p=0.000
+  finbert vs finbert-prosus-zeroshot [seed 2]: +16.1 [+13.8, +18.3] p=0.000
+  lexicon_LM+regex vs lexicon_LM [seed 1]: +17.4 [+15.4, +19.3] p=0.000
+  lexicon_LM+regex vs lexicon_LM [seed 2]: +17.4 [+15.4, +19.5] p=0.000
+  lexicon_LM+regex vs lexicon_LM [seed 3]: +17.4 [+15.4, +19.5] p=0.000
+
+FinBERT (seed 1) test errors: 306 / 2388
+true     predicted
+Bearish  Bullish      10
+         Neutral      55
+Bullish  Bearish      29
+         Neutral      74
+Neutral  Bearish      87
+         Bullish      51
+
+Sign errors (Bullish <-> Bearish), all 39:
+  [Bullish -> Bearish] $CACI - CACI gains a bull on growth acceleration https://t.co/VSXcxKpgly
+  [Bullish -> Bearish] $OIH $BKR $NOV - Buy oil service firms, Bernstein says after seven-year bearish view https://t.co/FFUM7WlJIZ
+  [Bullish -> Bearish] AM Best Revises Outlooks to Positive for Pacífico Compañía de Seguros y Reaseguros S.A. https://t.co/BGvmfeHKod https://t.co/gvtIQzMVbf
+  [Bearish -> Bullish] Trans Mountain Costs to Increase 70% to $9.5 Billion, CBC Says
+  [Bullish -> Bearish] Boeing 737 Max Net Orders Rise to -73 YTD in Nov. From -93 Oct. Yes, negative
+  [Bullish -> Bearish] Publicis Signals Worst May Be Over for Struggling Ad Group
+  [Bullish -> Bearish] Suncor's dividend boost reassures analysts amid weak Q4
+  [Bearish -> Bullish] Natural Gas Finally Starting To Buckle Against The Broader Market Liquidation. https://t.co/I7Uxy9MOlT #stocks #stockmarket #business
+  [Bullish -> Bearish] $UNG $WMB $XLE - U.S. oil firms vented or flared record amount of gas in 2018 https://t.co/JxF5CcvNyo
+  [Bearish -> Bullish] Kohl's Q3 EPS 78 cents vs. 98 cents
+  [Bearish -> Bullish] Kohl's Q3 revenue $4.625 bln vs. $4.628 bln; FactSet consensus $4.399 bln
+  [Bullish -> Bearish] Madison Square Garden Q2 EPS $3.93 vs. $3.42
+  [Bullish -> Bearish] EUR/USD Failure of 1-2-3 Pattern Might be Bullish
+  [Bullish -> Bearish] The number of customers canceling Netflix hasn’t accelerated around the debut of rival services from Disney and App… https://t.co/O7kqU5s0aM
+  [Bullish -> Bearish] GM not liable for punitive damages in ignition switch cases: U.S. appeals court
+  [Bearish -> Bullish] America's manufacturing sector is in a recession. But that is only part of the story. The industry has expanded by... https://t.co/YUtP2dQsAj
+  [Bearish -> Bullish] Jobless claims hits 2.5 months high
+  [Bearish -> Bullish] US Proved Oil & Gas Reserves Hit New Record High
+  [Bullish -> Bearish] $ECONX: November Nonfarm Payrolls 266K vs 182K https://t.co/M9gpUZQoF7 consensus https://t.co/uPsOqomWWO
+  [Bullish -> Bearish] $ECONX: October Wholesale Inventories M/M -0.7% vs +0.2% https://t.co/M9gpUZQoF7 consensus https://t.co/FnLMSxNhlq
+  [Bullish -> Bearish] China is in the process of waiving retaliatory tariffs on imports of U.S. pork and soy by domestic companies, a pro… https://t.co/08mZU9TrBX
+  [Bullish -> Bearish] Global Economy Won't See Recession in 2020, Says Quilvest
+  [Bullish -> Bearish] Job growth swells in January
+  [Bullish -> Bearish] Saudi Arabia's Unemployment Falls to Lowest in Over Three Years
+  [Bullish -> Bearish] Futures Fly On Trade Optimism Amid Barrage Of Megamergers https://t.co/zcIHhcFH6d
+  [Bullish -> Bearish] S&P 500, Nasdaq see closing highs; Slack halted for coming news https://t.co/cMizm4ImP6 https://t.co/vlKQ67OJDo
+  [Bullish -> Bearish] Stock Market Heads Off A Correction – For Now.
+  [Bullish -> Bearish] Stock Market Update: Stock market drifts in record territory
+  [Bullish -> Bearish] Tech stocks led all three major U.S. stock averages marginally into the black following upbeat statements on the U.… https://t.co/S2BkUCDmcx
+  [Bullish -> Bearish] Wall Street scraps its recession assumptions after robust jobs data https://t.co/oOuPFD2gWp https://t.co/4yICZnGl4z
+  [Bearish -> Bullish] $TIF $LVMHF - Luxury sector shakeup sends investors scrambling https://t.co/IWVWNxN0hy
+  [Bearish -> Bullish] $XLU - XLU Weekly: The Relief Rally From 43.44s Stalls At 58.09s. https://t.co/0QF67WMAAr #investing #markets #economy
+  [Bearish -> Bullish] Dow heavyweight Boeing ending strong decade with whimper
+  [Bullish -> Bearish] $NYMT out 1.82 from $1.60 @here
+  [Bullish -> Bearish] $TOPS Wow..... Morgan Stanley 13G 6.7%
+  [Bullish -> Bearish] Stock Traders Are Dumping Virus Hedges After ‘Peak Fear’ Passes
+  [Bullish -> Bearish] $JKHY day highs and clearing resistance, name not far from its record highs
+  [Bullish -> Bearish] $XOM (+5.8% pre) Exxon cuts full-year capex forecast by 30%, maintains long-term outlook - SA
+
+https://t.co/zXwoE1Emyq
+  [Bullish -> Bearish] Tesla Tops $900 in Parabolic Surge, Spurring Analyst Downgrade
+
+Sample Bearish -> Neutral:
+  San Francisco Faces Budget Gap as $6 Billion Can’t Meet Costs
+  The days of extraordinary market returns are over, says BlackRock https://t.co/gJu52JoL8J
+  UPDATE 1-Italian police search ArcelorMittal offices over Ilva probe
+  U.S. Dollar Index Futures (DX) Technical Analysis – Looking for Break into Retracement Zone at 97.630 to 97.472
+  Transport for London has decided not to extend Uber’s license to operate in the city. In a statement, transit offic… https://t.co/Wh2Fx1FLgh
+  Jerome Powell comes close to acknowledging that the Federal Reserve may not have the firepower to fight the next re… https://t.co/UD2rqlD6SD
+  Survey: 1 in 6 shoppers are still paying off last year's holiday debt https://t.co/AA08zAofod by @SJAsymkos https://t.co/di37aiduNS
+  Fitch Ratings adds to the drumbeat of credit assessors warning Oman about its precarious public finances https://t.co/4qw624Ecw2
+
+Sample Bullish -> Neutral:
+  U.S. factory and services activity quicken in November: Markit https://t.co/Uvnds2WdjP https://t.co/NlVK9IhoJ1
+  $CERN - Cerner: Undervalued, Wide Moat, Dominant. Read more: https://t.co/4KImEZVaU1 #finance #markets #economy
+  Bipartisan Group Of US Lawmakers Introduce Bill Providing $3B To Buy Oil To Fill Strategic Petroleum Reserve $SPY… https://t.co/pBI3Mk19e7
+  Global air passenger traffic has grown at 4% YoY in 2019 ytd while air freight volumes contracted 4% over the same period: BofA
+  USD/JPY Weekly Price Forecast – Dollar Continues To Test Resistance
+  The Estée Lauder Companies Delivers Exceptional Fiscal 2020 Second Quarter Results
+  Here's what has stocks surging midday: https://t.co/9Jg08tQs6j
+  Zimbabwe to the IMF: “Our fundamentals are now sound” https://t.co/HSSo4iqk7M
+
+Sample Neutral -> Bearish:
+  Wayfair initiated as hold with $95 price target at SunTrust Robinson Humphrey
+  UPDATE 1-Italian airline Alitalia's rescue in doubt as Atlantia backtracks
+  why macro funds are shutting down left and right https://t.co/gVYowOBmqe
+  Monday's big rally is premature: financial advisor #economy #MarketScreener https://t.co/Ld6fdzqgQd https://t.co/nqWvTA19gR
+  Richmond Fed Business Survey Shockingly Rises... Here's Why  https://t.co/c4DsjNAHPS
+  As relations between the U.S. and China continue to deteriorate, one immediate risk is a “military accident or oper… https://t.co/N2fewJJeQc
+  Russia Says Lives Lost in Joint Operation With Turkey in Syria
+  New York Governor Cuomo notes hospitalizations down sharply @Street_Insider $SPY
+
+Sample Neutral -> Bullish:
+  Grain Prices To Hold Steady, Trade Within A Range After A Neutral Inspections Report. Keep reading:… https://t.co/561iJ6W4Kg
+  The bond market is looking 'overbought' even in the context of coronavirus fears, analysts say https://t.co/ALSVRYK0bD
+  China lines up record-breaking dollar bond https://t.co/XqtVhZcmWm
+  A year in which the IPO market sobered up https://t.co/bgpuGK5XpJ
+  Boeing gets 10 additional orders for 737 MAX 8 planes valued at $1.2 billion from SunExpress
+  China and U.S. 'very close' to phase one trade deal - Global Times https://t.co/t4idLxj9Bz https://t.co/oLkqruR3gU
+  Highlight: 'Amgen's been a rocket ship of a stock ... we just think that latest move is just assuming too much ... we'r... https://t.co/xIHky138yC
+  YTD Performance:
+Dow Jones: Red
+30Y: +9%
+
+https://t.co/scCDfO2eUv https://t.co/sO1bMzirbY
+
+Tweets misclassified by ALL 10 models: 35
+  [Bearish] Barclays assigns only a 20% chance that studies on a Gilead antiviral drug being done in China will succeed against… https://t.co/lIgDhy1Gli
+  [Bearish] No, The Fed Won't "Save The Market" - Here's Why  https://t.co/Ibq99qWSFz
+  [Bearish] Bank of America sees demand surge for paycheck protection loans https://t.co/6feALqK8zN
+  [Bullish] 5 Reasons To Love Wendy's On Its 50th Birthday
+  [Bullish] AT&T says it will continue investing in Mexico: Mexican president
+  [Bullish] Hastings Technology Metals : Bulk Ore Sorting Trial Shows Outstanding Results #HastingsTechnologyMetals #Stock… https://t.co/jH9XEyDAxJ
+  [Bullish] Publicis Signals Worst May Be Over for Struggling Ad Group
+  [Neutral] $ITRN - Margins suffer at Ituran Location in Q3 https://t.co/cCI94Csl3s
+  [Neutral] $LJPC (halted pre) La Jolla Pharmaceutical (LJPC) to Reassess Continued Development of LJPC-401 Based on Recent Mix… https://t.co/8wDkULKz7f
+  [Bearish] Press release: cyber attack - update January 31, 2020 #Picanol #Stock #MarketScreener https://t.co/AXwQmrRC3G https://t.co/e4KSKzdmA9
+  [Bearish] T-Mobile said a hacker gained access to limited information contained in prepaid accounts https://t.co/Ui6KpaVAmj
+  [Bearish] 10Y Yield LOD 1.7620%
+  [Neutral] Yields head lower despite strong economic numbers
+  [Bearish] Every Bubble Eventually Finds Its Pin https://t.co/E3LesbBMP1
+  [Bullish] Weekly portfolios report : Stress quickly erased #Weeklyportfoliosreport #portfolio #MarketScreener… https://t.co/aght48Gwte
+  [Neutral] Mandiri Warns of Risk to Loan Growth From Virus Outbreak
+  [Neutral] why macro funds are shutting down left and right https://t.co/gVYowOBmqe
+  [Bearish] Madhya Pradesh Vyapam Scam: Man Gets 10 Years, 30 Others Get 7 Years In Jail
+  [Bullish] BPH Energy : Settlement of Litigation #BPHEnergy #Stock #MarketScreener https://t.co/DD5IfT4zgo https://t.co/sZfkzFWMcP
+  [Bullish] Fiat reaches settlement with Italy tax agency over Chrysler value claim
+  [Bullish] GM not liable for punitive damages in ignition switch cases: U.S. appeals court
+  [Bullish] HSBC makes last-minute settlement with ex-currencies head https://t.co/uqYy01pnBL
+  [Bullish] China is in the process of waiving retaliatory tariffs on imports of U.S. pork and soy by domestic companies, a pro… https://t.co/08mZU9TrBX
+  [Bullish] Consumer credit $18.9BN, Exp. $16BN, Last $9.6BN
+  [Bullish] Goldman: Go Long On Fracking

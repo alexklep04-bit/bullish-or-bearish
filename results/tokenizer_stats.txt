@@ -1,0 +1,19 @@
+Vocabulary size: BERT 30,522, FinBERT 30,873
+BERT     sub-words per tweet: mean 19.9, median 19;  alphabetic words split into >1 piece: 12.6% of 89,011
+FinBERT  sub-words per tweet: mean 19.4, median 18;  alphabetic words split into >1 piece: 12.3% of 89,011
+
+Example: Autodesk downgraded to underweight from neutral at JPMorgan
+  BERT    (15): auto ##des ##k down ##grade ##d to under ##weight from neutral at jp ##mo ##rgan
+  FinBERT (8): autodesk downgraded to underweight from neutral at jpmorgan
+  downgraded   BERT: down ##grade ##d         FinBERT: downgraded
+  underweight  BERT: under ##weight           FinBERT: underweight
+  overweight   BERT: over ##weight            FinBERT: overweight
+  bearish      BERT: bear ##ish               FinBERT: bearish
+  bullish      BERT: bull ##ish               FinBERT: bullish
+  dividend     BERT: divide ##nd              FinBERT: dividend
+  premarket    BERT: prem ##ark ##et          FinBERT: premarket
+  buyback      BERT: buy ##back               FinBERT: buyback
+  ebitda       BERT: e ##bit ##da             FinBERT: ebitda
+  jpmorgan     BERT: jp ##mo ##rgan           FinBERT: jpmorgan
+  blackrock    BERT: black ##rock             FinBERT: blackrock
+  goldman      BERT: goldman                  FinBERT: goldman

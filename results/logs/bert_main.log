@@ -1,0 +1,13 @@
+  [finbert seed=1 frac=1.0] epoch 1: loss=0.5952 dev F1=0.7856
+  [finbert seed=1 frac=1.0] epoch 2: loss=0.2964 dev F1=0.8262
+  [finbert seed=1 frac=1.0] epoch 3: loss=0.1632 dev F1=0.8300
+  [finbert seed=1 frac=1.0] epoch 4: loss=0.0959 dev F1=0.8274
+finbert                      seed=1  dev F1=0.830  test acc=0.872 F1=0.830  PB50 F1=0.684  PBall F1=0.857
+  [finbert seed=2 frac=1.0] epoch 1: loss=0.5999 dev F1=0.7906
+  [finbert seed=2 frac=1.0] epoch 2: loss=0.3013 dev F1=0.8220
+  [finbert seed=2 frac=1.0] epoch 3: loss=0.1639 dev F1=0.8274
+  [finbert seed=2 frac=1.0] epoch 4: loss=0.0903 dev F1=0.8186
+finbert                      seed=2  dev F1=0.827  test acc=0.856 F1=0.814  PB50 F1=0.703  PBall F1=0.868
+  [finbert seed=3 frac=1.0] epoch 1: loss=0.6005 dev F1=0.8103
+  [finbert seed=3 frac=1.0] epoch 2: loss=0.2983 dev F1=0.8236
+  [finbert seed=3 frac=1.0] epoch 3: loss=0.1666 dev F1=0.8264

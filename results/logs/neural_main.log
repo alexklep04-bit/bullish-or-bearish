@@ -1,0 +1,8 @@
+vocab=14333  GloVe coverage=82.3%
+cnn-rand                     seed=1  dev F1=0.741  test acc=0.832 F1=0.761  PB50 F1=0.475  PBall F1=0.557
+cnn-rand                     seed=2  dev F1=0.748  test acc=0.831 F1=0.758  PB50 F1=0.432  PBall F1=0.508
+cnn-rand                     seed=3  dev F1=0.729  test acc=0.815 F1=0.728  PB50 F1=0.484  PBall F1=0.582
+cnn-static                   seed=1  dev F1=0.746  test acc=0.825 F1=0.752  PB50 F1=0.551  PBall F1=0.669
+cnn-static                   seed=2  dev F1=0.741  test acc=0.812 F1=0.736  PB50 F1=0.550  PBall F1=0.671
+cnn-static                   seed=3  dev F1=0.757  test acc=0.826 F1=0.754  PB50 F1=0.500  PBall F1=0.610
+vocab=14333  GloVe coverage=82.3%

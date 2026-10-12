@@ -1,0 +1,72 @@
+test_index,bank,role,label_name,text,LM lexicon + regex,TF-IDF + LogReg,CNN-non-static,BiLSTM,FinBERT
+3,Deutsche Bank,messenger,Bearish,$SAN: Deutsche Bank cuts to Hold,Neutral,Bearish,Bearish,Bearish,Bearish
+5,Barclays,messenger,Bearish,$TAP - Barclays cools on Molson Coors https://t.co/FJFsZWJHuH,Neutral,Bearish,Bearish,Bearish,Bearish
+6,Barclays,messenger,Bearish,$TAP: Barclays cuts to Equal Weight,Neutral,Bearish,Bearish,Bearish,Bearish
+8,Barclays,messenger,Bearish,Barclays assigns only a 20% chance that studies on a Gilead antiviral drug being done in China will succeed against… https://t.co/lIgDhy1Gli,Neutral,Neutral,Neutral,Bullish,Neutral
+13,Goldman Sachs,messenger,Bearish,Goldman pulls Progressive from Goldman's conviction list; shares -2.7%,Bearish,Bullish,Bearish,Neutral,Bearish
+14,BofA/Merrill,messenger,Bearish,Hanesbrands downgraded to underperform vs. neutral at BofA Merrill Lynch,Bearish,Bearish,Bearish,Bearish,Bearish
+18,Credit Suisse,messenger,Bearish,MPLX cut at Credit Suisse on potential dilution from Marathon strategic review,Bearish,Bearish,Bearish,Bearish,Bearish
+19,Wells Fargo,messenger,Bearish,Netflix downgraded to underperform at Wells Fargo,Bearish,Bearish,Bearish,Bearish,Bearish
+20,Deutsche Bank,messenger,Bearish,NortonLifeLock stock price target cut to $18 from $25 at Deutsche Bank,Bearish,Bearish,Bearish,Bearish,Bearish
+23,BofA/Merrill,messenger,Bearish,Nutrien stock price target cut to $54 vs. $55 at BofA Merrill Lynch,Bearish,Bearish,Bearish,Bearish,Bearish
+31,Deutsche Bank,messenger,Bullish,$CNHI - CNH Industrial upped to Buy at Deutsche Bank on valuation https://t.co/w8VWmkTwAb,Neutral,Bullish,Bullish,Bullish,Bullish
+32,JPMorgan,messenger,Bullish,"$DVN $HES $VET - Devon Energy, Hess upgraded at J.P. Morgan on improved E&P outlook https://t.co/ULkUan1Vkq",Bullish,Bullish,Bullish,Bullish,Bullish
+33,JPMorgan,messenger,Bullish,$ENR - Energizer shakes off JPMorgan's bear call https://t.co/w83qnp2ni5,Neutral,Bullish,Bullish,Bullish,Bullish
+37,Goldman Sachs,messenger,Bullish,$SMPQY $HSIC $XRAY - Goldman ups view on Henry Schein in premarket analyst action https://t.co/ZjKejttior,Neutral,Bullish,Bullish,Bullish,Bullish
+39,BofA/Merrill,messenger,Bullish,$URBN - Urban Outfitters stands out in mall sector - BofA https://t.co/pvig3M420p,Neutral,Bearish,Neutral,Bearish,Bullish
+49,BofA/Merrill,messenger,Bullish,BofA sees 'solid demand backdrop' for D.R. Horton in 2020,Neutral,Bullish,Bullish,Bullish,Bullish
+53,Citi,messenger,Bullish,Citi raises Alphabet on margin potential,Neutral,Bullish,Neutral,Bullish,Bullish
+54,Citi,subject,Bullish,Citigroup stock price target raised to $127 from $124 at Oppenheimer,Bullish,Bullish,Bullish,Bullish,Bullish
+55,BofA/Merrill,messenger,Bullish,"ETF assets to surge tenfold in 10 years to $50 trillion, Bank of America predicts",Bullish,Neutral,Neutral,Bullish,Bullish
+57,Goldman Sachs,subject,Bullish,Goldman Sachs stock price target raised to $367 from $358 at Oppenheimer,Bullish,Bullish,Bullish,Bullish,Bullish
+59,Deutsche Bank,messenger,Bullish,Halliburton started at buy with $26 stock price target at Deutsche Bank,Neutral,Bullish,Bullish,Bullish,Bullish
+69,JPMorgan,messenger,Bullish,"Model N upgraded to overweight from neutral at JPMorgan, price target raised to $36 from $30",Bullish,Bullish,Bullish,Bullish,Bullish
+70,Morgan Stanley,messenger,Bullish,Morgan Stanley sees GM doubling in bull case scenario,Neutral,Bullish,Bullish,Bullish,Bullish
+76,JPMorgan,messenger,Bullish,Progyny started at overweight with $26 stock price target at J.P. Morgan,Bullish,Bullish,Bullish,Bullish,Bullish
+78,Deutsche Bank,messenger,Bullish,Spirit Airlines stock price target raised to $55 from $49 at Deutsche Bank,Bullish,Bullish,Bullish,Bullish,Bullish
+82,Deutsche Bank,messenger,Bullish,TechnipFMC started at buy with $33 stock price target at Deutsche Bank,Neutral,Bullish,Bullish,Bearish,Bullish
+83,Deutsche Bank,messenger,Bullish,Tesla stock price target raised to $290 from $260 at Deutsche Bank,Bullish,Bullish,Bullish,Bullish,Bullish
+88,UBS,messenger,Bullish,"UBS Upgrades Hasbro As Stock Price Bakes In Tariffs, Slow Holiday",Bullish,Bullish,Bullish,Bullish,Bullish
+90,BofA/Merrill,messenger,Bullish,Vertex Pharmaceuticals stock price target raised to $245 from $235 at BofA Merrill Lynch,Bullish,Bullish,Bullish,Bullish,Bullish
+97,Credit Suisse,messenger,Neutral,Little impact on Netflix from Disney Plus launch - Credit Suisse,Neutral,Neutral,Neutral,Neutral,Neutral
+181,BofA/Merrill,subject,Bearish,Bank of America sees demand surge for paycheck protection loans https://t.co/6feALqK8zN,Bullish,Neutral,Neutral,Neutral,Neutral
+227,JPMorgan,messenger,Bullish,J.P. Morgan: Bausch to better weather the market than other specialty drugmakers,Bullish,Neutral,Bullish,Neutral,Bullish
+359,Goldman Sachs,subject,Neutral,Goldman Sachs is planning on giving some of its most valuable software to Wall Street for free. https://t.co/dn4iEluF1j,Bullish,Neutral,Neutral,Neutral,Neutral
+360,Goldman Sachs,subject,Neutral,"Goldman's Marcus aims to lure home buyers, sellers to its personal loan platform",Neutral,Neutral,Neutral,Neutral,Neutral
+376,JPMorgan,subject,Neutral,JPMorgan expands private credit group,Neutral,Neutral,Neutral,Neutral,Neutral
+394,Morgan Stanley,subject,Neutral,Morgan Stanley pushes advisers to boost revenue in 2020 pay plan -sources,Bullish,Neutral,Neutral,Bullish,Neutral
+493,Wells Fargo,subject,Neutral,Wells Fargo offers real-time payments on RTP network,Neutral,Neutral,Neutral,Neutral,Neutral
+495,Credit Suisse,subject,Neutral,What Top Shareholders Said in Run Up to Credit Suisse CEO Ouster,Neutral,Neutral,Bullish,Neutral,Neutral
+562,Wells Fargo,subject,Neutral,$ERC - Wells Fargo Multi-Sector Income Fund declares $0.09888 dividend https://t.co/7AP9iYwPSF,Neutral,Neutral,Neutral,Neutral,Neutral
+564,JPMorgan,subject,Neutral,$JPM - JPMorgan Chase declares $0.90 dividend https://t.co/NGBRqyTMUq,Neutral,Neutral,Neutral,Neutral,Neutral
+963,BofA/Merrill,messenger,Bearish,"Only 11% of quant funds are ahead of their benchmark YTD, underperforming by 3.2ppt: BofA",Bearish,Bullish,Neutral,Bearish,Bearish
+967,BlackRock,messenger,Bearish,"The days of extraordinary market returns are over, says BlackRock https://t.co/gJu52JoL8J",Neutral,Bearish,Neutral,Neutral,Neutral
+975,JPMorgan,messenger,Bullish,"$USA $CRF $SCHX - U.S. is past the peak, economy to reopen shortly - JPMorgan https://t.co/V97lqc11yV",Neutral,Bullish,Bearish,Bullish,Bullish
+979,Goldman Sachs,messenger,Bullish,"Highlight: Goldman Sachs predicts that gold will reach $1,600 an ounce by 2020. “$1,600 is gonna be a footnote,” sa… https://t.co/DFzhAByZ6Y",Neutral,Bullish,Bullish,Bullish,Bullish
+986,BlackRock,messenger,Bullish,This chart shows why BlackRock is upbeat on U.S. credit despite the pandemic https://t.co/7LYUG0HLHr,Bullish,Bullish,Bullish,Bullish,Bullish
+1115,JPMorgan,incidental,Neutral,Ex-JPMorgan Banker’s Career Gamble Pays Off in Muni-Bond Blitz,Neutral,Neutral,Neutral,Neutral,Neutral
+1158,JPMorgan,subject,Neutral,Highlight: @julialaroche breaks down Jamie Dimon's letter to $JPM shareholders: https://t.co/x527rcLWml,Bearish,Neutral,Neutral,Neutral,Neutral
+1503,BlackRock,messenger,Neutral,BlackRock slashes stake in Peabody Energy,Bearish,Neutral,Neutral,Bearish,Bearish
+1567,Goldman Sachs,messenger,Bearish,Goldman Sachs sees China lowering its economic growth target for 2020 to 'around 6%' https://t.co/L4v0LbULsq,Neutral,Bearish,Bullish,Bullish,Bearish
+1609,BofA/Merrill,messenger,Bullish,Global air passenger traffic has grown at 4% YoY in 2019 ytd while air freight volumes contracted 4% over the same period: BofA,Neutral,Neutral,Neutral,Bearish,Neutral
+1612,Goldman Sachs,messenger,Bullish,Goldman: Go Long On Fracking,Neutral,Neutral,Neutral,Neutral,Neutral
+1656,Morgan Stanley,messenger,Neutral,"Morgan Stanley Sees Lower Truck Capacity, Higher Rates In 2020",Neutral,Bullish,Bullish,Neutral,Bearish
+1692,Goldman Sachs,messenger,Bearish,"Trade, U.S. Elections Are Top Market Risks, Says Goldman Sachs's Moe",Neutral,Bullish,Neutral,Neutral,Neutral
+1693,"Citi, BofA/Merrill",subject,Bearish,$XLF $BAC $C - Fed fires a dud as financial sector plunges https://t.co/OwDNvwPYyd,Bearish,Neutral,Bearish,Bearish,Bearish
+1859,Goldman Sachs,incidental,Neutral,"UPDATE 1-Former Goldman Sachs CEO pushes back on Warren's criticism, wealth tax",Bearish,Neutral,Neutral,Neutral,Neutral
+1875,Citi,incidental,Neutral,Alliance Data taps new CEO from Citi,Bullish,Neutral,Neutral,Neutral,Neutral
+1880,Credit Suisse,subject,Neutral,Credit Suisse CEO Thiam Exits in Shock Reversal After Scandal,Neutral,Neutral,Neutral,Neutral,Neutral
+1900,Morgan Stanley,subject,Neutral,"MOVES-Morgan Stanley hires former AIG executive to lead global support centers
+https://t.co/ypYjW6jfYZ https://t.co/a6PKCsMonu",Neutral,Neutral,Neutral,Neutral,Neutral
+1969,Morgan Stanley,messenger,Bullish,$TOPS Wow..... Morgan Stanley 13G 6.7%,Neutral,Bullish,Neutral,Neutral,Bearish
+2007,BofA/Merrill,messenger,Bullish,"RECAP 12/10 +Pos Comments:
+$HUYA + Hedgeye
+$TSLA + Rosenblatt
+$TXMD + CJS
+$INFY + BofAML",Neutral,Bullish,Bullish,Bullish,Bullish
+2291,Wells Fargo,messenger,Bearish,WWE -3.1% amid two-notch cut at Wells Fargo,Bearish,Bearish,Bearish,Bearish,Bearish
+2322,UBS,messenger,Bullish,"$STZ (+4.9% pre) UBS Upgrades Constellation Brands (STZ) to Buy, $180 PT
+
+https://t.co/y3Tfnn7kfo",Bullish,Bullish,Bullish,Bullish,Bullish
+2328,BofA/Merrill,messenger,Bullish,"$ZS (+3.6% pre) BofA/Merrill Lynch Upgrades Zscaler (ZS) to Buy; Cyber Security Opportunity Too Big to Ignore, $68… https://t.co/CJBmEfW5tG",Bullish,Bullish,Bullish,Bullish,Bullish
+2366,Deutsche Bank,messenger,Bullish,"Tesla's stock ticks up after Deutsche Bank lifts price target, which implies an 18% decline",Bearish,Bullish,Bullish,Bullish,Bullish

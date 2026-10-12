@@ -1,0 +1,11 @@
+  [bert seed=1 frac=1.0] epoch 1: loss=0.6708 dev F1=0.7867
+  [bert seed=1 frac=1.0] epoch 2: loss=0.3616 dev F1=0.7987
+  [bert seed=1 frac=1.0] epoch 3: loss=0.2153 dev F1=0.8310
+  [bert seed=1 frac=1.0] epoch 4: loss=0.1370 dev F1=0.8296
+bert                         seed=1  dev F1=0.831  test acc=0.873 F1=0.835  PB50 F1=0.649  PBall F1=0.800
+  [bert seed=2 frac=1.0] epoch 1: loss=0.6868 dev F1=0.7892
+  [bert seed=2 frac=1.0] epoch 2: loss=0.3420 dev F1=0.7976
+  [bert seed=2 frac=1.0] epoch 3: loss=0.1999 dev F1=0.8168
+  [bert seed=2 frac=1.0] epoch 4: loss=0.1175 dev F1=0.8182
+bert                         seed=2  dev F1=0.818  test acc=0.877 F1=0.842  PB50 F1=0.694  PBall F1=0.856
+  [bert seed=3 frac=1.0] epoch 1: loss=0.6465 dev F1=0.7777

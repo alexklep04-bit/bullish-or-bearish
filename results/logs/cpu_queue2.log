@@ -1,0 +1,22 @@
+vocab=14333  GloVe coverage=82.3%
+cnn-nonstatic                seed=2  dev F1=0.777  test acc=0.837 F1=0.776  PB50 F1=0.541  PBall F1=0.657
+cnn-nonstatic                seed=3  dev F1=0.772  test acc=0.837 F1=0.775  PB50 F1=0.568  PBall F1=0.680
+bilstm                       seed=2  dev F1=0.769  test acc=0.843 F1=0.778  PB50 F1=0.512  PBall F1=0.609
+bilstm                       seed=3  dev F1=0.776  test acc=0.830 F1=0.777  PB50 F1=0.577  PBall F1=0.701
+MAIN NEURAL RUNS DONE
+vocab=14333  GloVe coverage=82.3%
+cnn-nonstatic_frac0.1        seed=2  dev F1=0.608  test acc=0.747 F1=0.599  PB50 F1=0.454  PBall F1=0.563
+cnn-nonstatic_frac0.1        seed=3  dev F1=0.626  test acc=0.752 F1=0.610  PB50 F1=0.426  PBall F1=0.520
+vocab=14333  GloVe coverage=82.3%
+cnn-nonstatic_frac0.25       seed=2  dev F1=0.705  test acc=0.789 F1=0.688  PB50 F1=0.506  PBall F1=0.635
+cnn-nonstatic_frac0.25       seed=3  dev F1=0.690  test acc=0.788 F1=0.681  PB50 F1=0.539  PBall F1=0.644
+vocab=14333  GloVe coverage=82.3%
+cnn-nonstatic_frac0.5        seed=2  dev F1=0.752  test acc=0.817 F1=0.748  PB50 F1=0.550  PBall F1=0.686
+cnn-nonstatic_frac0.5        seed=3  dev F1=0.736  test acc=0.817 F1=0.741  PB50 F1=0.556  PBall F1=0.675
+tfidf_lr[norm+char]_frac0.1  seed=2  dev F1=0.634  test acc=0.740 F1=0.618  PB50 F1=0.433  PBall F1=0.504
+tfidf_lr[norm+char]_frac0.1  seed=3  dev F1=0.625  test acc=0.745 F1=0.648  PB50 F1=0.410  PBall F1=0.450
+tfidf_lr[norm+char]_frac0.25 seed=2  dev F1=0.691  test acc=0.771 F1=0.674  PB50 F1=0.449  PBall F1=0.530
+tfidf_lr[norm+char]_frac0.25 seed=3  dev F1=0.706  test acc=0.763 F1=0.669  PB50 F1=0.474  PBall F1=0.552
+tfidf_lr[norm+char]_frac0.5  seed=2  dev F1=0.745  test acc=0.805 F1=0.731  PB50 F1=0.481  PBall F1=0.568
+tfidf_lr[norm+char]_frac0.5  seed=3  dev F1=0.744  test acc=0.787 F1=0.705  PB50 F1=0.510  PBall F1=0.610
+CPU QUEUE DONE

@@ -1,0 +1,7 @@
+vocab=14333  GloVe coverage=82.3%
+cnn-nonstatic_frac0.1        seed=1  dev F1=0.624  test acc=0.752 F1=0.619  PB50 F1=0.486  PBall F1=0.599
+vocab=14333  GloVe coverage=82.3%
+cnn-nonstatic_frac0.25       seed=1  dev F1=0.700  test acc=0.791 F1=0.692  PB50 F1=0.515  PBall F1=0.635
+vocab=14333  GloVe coverage=82.3%
+cnn-nonstatic_frac0.5        seed=1  dev F1=0.726  test acc=0.813 F1=0.728  PB50 F1=0.555  PBall F1=0.682
+learning curve (cnn) done
